@@ -188,5 +188,5 @@ async function bookAppointment() {
         await browser.close();
     }
 }
-  
-  bookAppointment();
+console.log('Task started at', new Date().toISOString());
+bookAppointment().then(() => console.log('Task ended at', new Date().toISOString()));
