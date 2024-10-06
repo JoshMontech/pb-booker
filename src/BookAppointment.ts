@@ -157,9 +157,9 @@ async function confirmDone(page: Page) {
 
 async function bookAppointment() {
     const browser: Browser = await chromium.launch({
-        headless: false,
-        slowMo: 50,
+        headless: true,
     });
+    
     const page: Page = await browser.newPage();
   
     try {
