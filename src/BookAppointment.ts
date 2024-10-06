@@ -23,8 +23,8 @@ async function login(page: Page) {
     await page.goto('https://austinpickleranch.podplay.app/login?redirect=%2Faccount&loginMode=password', { waitUntil: 'networkidle' });
   
     console.log('Entering credentials...');
-    await page.fill('#loginEmail', process.env.USERNAME || 'joshmonte14@gmail.com');
-    await page.fill('#loginPassword', process.env.PASSWORD || 'Caf00se!');
+    await page.fill('#loginEmail', process.env.USERNAME || '');
+    await page.fill('#loginPassword', process.env.PASSWORD || '');
   
     console.log('Submitting login form...');
     await Promise.all([
@@ -159,7 +159,7 @@ async function bookAppointment() {
     const browser: Browser = await chromium.launch({
         headless: true,
     });
-    
+
     const page: Page = await browser.newPage();
   
     try {
