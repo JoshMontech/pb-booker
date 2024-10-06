@@ -1,7 +1,8 @@
 import { chromium, Browser, Page, ElementHandle } from 'playwright';
 import dotenv from 'dotenv';
 
-dotenv.config();
+// whatever your path is for the .env file
+dotenv.config({ path: '/home/ec2-user/pb-booker/.env' });
 enum DayEnum {
     SUNDAY = 'Sun',
     MONDAY = 'Mon',
